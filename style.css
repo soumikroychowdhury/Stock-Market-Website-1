@@ -1,3 +1,10 @@
 *{
     background-color: rgb(19, 17, 17);
 }
+h1{
+    color: rgb(163, 151, 151);
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-style: oblique;
+}
