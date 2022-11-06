@@ -26,6 +26,9 @@ p{
     vertical-align: top;
     margin-top: 100px;
 }
+.imground{
+    border-radius: 50%;
+}
 @keyframes bounce{
     0%{
         bottom: 0;
