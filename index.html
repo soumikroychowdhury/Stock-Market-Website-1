@@ -12,7 +12,10 @@
     <h1>Stock Market</h1>
 
 
-
+    <nav>
+      <a href="index1.html">Crypto Design</a>
+      <a href="index2.html">Stock Data</a>
+    </nav>
 
 
 
@@ -30,6 +33,10 @@
                   <button type = "submit" class = "search-btn btn" id = "search-btn">
                     <i class = "fas fa-search"></i>
                   </button>
+
+
+
+                  <button onclick="stocksearch()"> Search Stock</button>
                 </div>
               </div>
 
@@ -55,5 +62,14 @@
     <div class="arrow">
       <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
    </div>
+   <script>
+
+    
+
+
+    function stocksearch(){
+      window.location.assign("https://www.google.com/finance/")
+    }
+   </script>
 </body>
 </html>

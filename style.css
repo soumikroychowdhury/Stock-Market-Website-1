@@ -13,3 +13,12 @@ h1{
 p{
     font-size: 2rem;
 }
+a{
+    color: rgb(108, 56, 56);
+    text-decoration: dashed;
+    font-weight: bold;
+    margin: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-size: 2rem;
+}
