@@ -13,6 +13,56 @@ h1{
 p{
     font-size: 2rem;
 }
+.container{
+    min-height: 100vh;
+}
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+.search{
+    margin: 2rem 0;
+}
+.search cite{
+    font-size: 2rem;
+}
+.searchbox{
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+.search-control,
+.search-btn{
+    width: 100%;
+}
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid red;
+    color: rgb(138, 56, 56);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.search-control::placeholder{
+    color: rgb(150, 43, 43);
+}
+.search-btn{
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    color: rgb(26, 20, 20);
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+}
+.search-btn:hover{
+    background: rgb(118, 21, 21);
+}
 a{
     color: rgb(108, 56, 56);
     text-decoration: dashed;
