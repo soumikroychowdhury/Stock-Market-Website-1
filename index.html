@@ -48,7 +48,14 @@
                         
                     </div>
                 </section>
-
+                <table class="table">
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Indentifier</th>
+                    <th>Open</th>
+                    <th>High</th>
+                  </tr>
+                </table>
 
                 
               </div>
@@ -79,11 +86,20 @@
 	    	'X-RapidAPI-Host': 'latest-stock-price.p.rapidapi.com'
 	    }
     };
-
-    fetch('https://latest-stock-price.p.rapidapi.com/any', options)
+    var table=document.querySelector('table');
+    fetch('https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=BRITANNIAEQN', options)
     	.then(response => response.json())
-    	.then(response => console.log(response))
-    	.catch(err => console.error(err));
+    	.then((data)=>{
+          data.forEach((item)=> {
+            table.innerHTML+= `
+              <td>${item.symbol}</td>
+              <td>${item.identifier}</td>
+              <td>${item.open}</td>
+              <td>${item.lastPrice}</td>
+            `;
+          })
+      })
+    	.catch(error => console.error(error));
    </script>
 </body>
 </html>
