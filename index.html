@@ -82,7 +82,7 @@
     const options = {
 	    method: 'GET',
 	    headers: {
-	    	'X-RapidAPI-Key': '9a484405f2msh5506853a312f2bcp1499e6jsnff8722ffbe57',
+	    	'X-RapidAPI-Key': '',
 	    	'X-RapidAPI-Host': 'latest-stock-price.p.rapidapi.com'
 	    }
     };
@@ -112,6 +112,26 @@
     	.catch(error => console.error(error));
     }
 
+
+
+    // fetch('https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=BRITANNIAEQN', options)
+    // 	.then(response => response.json())
+    // 	.then((data)=>{
+    //       data.forEach((item)=> {
+    //         table.innerHTML+= `
+    //           <td>${item.symbol}</td>
+    //           <td>${item.identifier}</td>
+    //           <td>${item.open}</td>
+    //           <td>${item.dayHigh}</td>
+    //           <td>${item.dayLow}</td>
+    //           <td>${item.lastPrice}</td>
+    //           <td>${item.lastUpdateTime}</td>
+    //           <td>${item.yearHigh}</td>
+    //           <td>${item.yearLow}</td>
+    //         `;
+    //       })
+    //   })
+    // 	.catch(error => console.error(error));
    </script>
 </body>
 </html>
