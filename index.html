@@ -92,7 +92,12 @@
 	    }
     };
     var table=document.querySelector('table');
-    fetch('https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=BRITANNIAEQN', options)
+    const searchBtn = document.getElementById('search-btn');
+    searchBtn.addEventListener('click', getList);
+
+    function getList(){
+      let searchInputTxt = document.getElementById('search-input').value.trim();
+      fetch(`https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=${searchInputTxt}`, options)
     	.then(response => response.json())
     	.then((data)=>{
           data.forEach((item)=> {
@@ -110,6 +115,28 @@
           })
       })
     	.catch(error => console.error(error));
+    }
+
+
+
+    // fetch('https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=BRITANNIAEQN', options)
+    // 	.then(response => response.json())
+    // 	.then((data)=>{
+    //       data.forEach((item)=> {
+    //         table.innerHTML+= `
+    //           <td>${item.symbol}</td>
+    //           <td>${item.identifier}</td>
+    //           <td>${item.open}</td>
+    //           <td>${item.dayHigh}</td>
+    //           <td>${item.dayLow}</td>
+    //           <td>${item.lastPrice}</td>
+    //           <td>${item.lastUpdateTime}</td>
+    //           <td>${item.yearHigh}</td>
+    //           <td>${item.yearLow}</td>
+    //         `;
+    //       })
+    //   })
+    // 	.catch(error => console.error(error));
    </script>
 </body>
 </html>
