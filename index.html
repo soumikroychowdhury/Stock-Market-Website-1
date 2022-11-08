@@ -29,14 +29,31 @@
                 Enter the name of the stock of which you want to see details<br>
         
                 <div class="searchbox">
-                  <input type = "text" class = "search-control" placeholder="Enter the stock name" id = "search-input">
+                  <input type = "text" class = "search-control" placeholder="Enter the stock name" id = "search-input" list="colorlist">
+                  <datalist id="colorlist">
+                    <option>NIFTY 500</option>
+                    <option>NIITLTDEQN</option>
+                    <option>JMFINANCILEQN</option>
+                    <option>RVNLEQN</option>
+                    <option>BANKBARODAEQN</option>
+                    <option>IRBEQN</option>
+                    <option>BRITANNIAEQN</option>
+                    <option>FINPIPEEQN</option>
+                    <option>GESHIPEQN</option>
+                    <option>UNIONBANKEQN</option>
+                    <option>TRIDENTEQN</option>
+                    <option>TATAMTRDVREQN</option>
+                    <option>SUPREMEINDEQN</option>
+                    <option>EASEMYTRIPEQN</option>
+                    <option>BANKINDIAEQN</option>
+                  </datalist>
                   <button type = "submit" class = "search-btn btn" id = "search-btn">
                     <i class = "fas fa-search"></i>
                   </button>
 
 
 
-                  <button onclick="stocksearch()"> Search Stock</button>
+                  
                 </div>
               </div>
 
@@ -62,10 +79,8 @@
         </div>
     </div>
 
-    
-    <div class="select">
+    <button class="fing" onclick="stocksearch()"> Google Finance</button>
 
-    </div>
     <div class="arrow">
       <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
    </div>
@@ -112,26 +127,6 @@
     	.catch(error => console.error(error));
     }
 
-
-
-    // fetch('https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=BRITANNIAEQN', options)
-    // 	.then(response => response.json())
-    // 	.then((data)=>{
-    //       data.forEach((item)=> {
-    //         table.innerHTML+= `
-    //           <td>${item.symbol}</td>
-    //           <td>${item.identifier}</td>
-    //           <td>${item.open}</td>
-    //           <td>${item.dayHigh}</td>
-    //           <td>${item.dayLow}</td>
-    //           <td>${item.lastPrice}</td>
-    //           <td>${item.lastUpdateTime}</td>
-    //           <td>${item.yearHigh}</td>
-    //           <td>${item.yearLow}</td>
-    //         `;
-    //       })
-    //   })
-    // 	.catch(error => console.error(error));
    </script>
 </body>
 </html>

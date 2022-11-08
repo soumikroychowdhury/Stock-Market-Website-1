@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 *{
     background-color: rgb(19, 17, 17);
     text-align: center;
-    color: rgb(224, 110, 110);
+    color: yellow;
+    font-family: 'Poppins', sans-serif;
+    background: url(background.jpg);
+    background-size: cover;
 }
 .navtop:hover{
-    background-color: rgb(185, 122, 122);
+    font-size: bold;
+    color: white;
+    background-color: yellow;
     border-radius: 25%;
 }
 h1{
-    color: rgb(163, 151, 151);
+    color: yellow;
     font-size: 5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
@@ -18,10 +24,9 @@ p{
     font-size: 2rem;
 }
 .animate{
-    animation: bounce 0.5s ease 0s infinite alternate both;
-    background: rgb(44, 36, 36);
+    background: yellow;
     border-radius: 50%;
-    color: rgb(141, 116, 116);
+    color: black;
     cursor: pointer;
     font-weight: 200;
     letter-spacing: 0.2rem;
@@ -32,16 +37,6 @@ p{
 }
 .imground{
     border-radius: 50%;
-}
-@keyframes bounce{
-    0%{
-        bottom: 0;
-        box-shadow: 0 0 5px rgb(15, 15, 15);
-    }
-    100%{
-        bottom: 50px;
-        box-shadow: 0 50px 50px rgb(2, 2, 2);
-    }
 }
 .arrow{
   position: fixed;
@@ -82,39 +77,45 @@ p{
     margin: 1.2rem 0;
     display: flex;
     align-items: stretch;
+    color: yellow;
 }
 .search-control,
 .search-btn{
     width: 100%;
+    color: rgb(114, 114, 20);
 }
 .search-control{
     padding: 0 1rem;
     font-size: 1.1rem;
     font-family: inherit;
     outline: 0;
-    border: 1px solid red;
-    color: rgb(138, 56, 56);
+    border: 1px solid yellow;
+    color: yellow;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
 .search-control::placeholder{
-    color: rgb(150, 43, 43);
+    color: white;
 }
 .search-btn{
     width: 55px;
     height: 55px;
     font-size: 1.8rem;
-    color: rgb(26, 20, 20);
     border: none;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: all 0.4s linear;
 }
 .search-btn:hover{
-    background: rgb(118, 21, 21);
+    background: yellowgreen;
+    cursor: pointer;
+}
+.fing:hover{
+    cursor: pointer;
+    color: yellowgreen;
 }
 table,tr,th,td{
-    color: rgb(81, 33, 33);
+    color: yellow;
     border:2px solid rgb(173, 165, 165);
     border-collapse: collapse;
     padding: 2rem;
@@ -132,7 +133,7 @@ td{
     background-color: rgb(96, 93, 93);
 }
 a{
-    color: rgb(108, 56, 56);
+    color: rgb(147, 188, 14);
     text-decoration: dashed;
     font-weight: bold;
     margin: 14px;
