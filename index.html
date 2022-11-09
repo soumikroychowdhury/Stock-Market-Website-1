@@ -58,22 +58,13 @@
               </div>
 
               <div>
-                <h2 class = "title">These are the details of the stock:</h2>
+                <h2 class = "title">Stock Details:</h2>
 
                 <table class="table">
-                  <tr>
-                    <th>Symbol</th>
-                    <th>Indentifier</th>
-                    <th>Open</th>
-                    <th>Day High</th>
-                    <th>Day Low</th>
-                    <th>Last Price</th>
-                    <th>Last Update Time</th>
-                    <th>Year High</th>
-                    <th>Year Low</th>
-                  </tr>
+                  
                 </table>
 
+                
                 
               </div>
         </div>
@@ -84,48 +75,7 @@
     <div class="arrow">
       <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
    </div>
-   <script>
-
-    
-
-
-    function stocksearch(){
-      window.location.assign("https://www.google.com/finance/")
-    }
-
-
-    const options = {
-	    method: 'GET',
-	    headers: {
-	    	'X-RapidAPI-Key': '',
-	    	'X-RapidAPI-Host': 'latest-stock-price.p.rapidapi.com'
-	    }
-    };
-    var table=document.querySelector('table');
-    const searchBtn = document.getElementById('search-btn');
-    searchBtn.addEventListener('click', getList);
-
-    function getList(){
-      let searchInputTxt = document.getElementById('search-input').value.trim();
-      fetch(`https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%20500&Identifier=${searchInputTxt}`, options)
-    	.then(response => response.json())
-    	.then((data)=>{
-          data.forEach((item)=> {
-            table.innerHTML+= `
-              <td>${item.symbol}</td>
-              <td>${item.identifier}</td>
-              <td>${item.open}</td>
-              <td>${item.dayHigh}</td>
-              <td>${item.dayLow}</td>
-              <td>${item.lastPrice}</td>
-              <td>${item.lastUpdateTime}</td>
-              <td>${item.yearHigh}</td>
-              <td>${item.yearLow}</td>
-            `;
-          })
-      })
-    	.catch(error => console.error(error));
-    }
+   <script src="script.js">
 
    </script>
 </body>
