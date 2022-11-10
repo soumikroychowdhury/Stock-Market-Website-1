@@ -1,15 +1,13 @@
-var api = "demo"; // get your own api (https://www.alphavantage.co/support/#api-key)
+var api = "demo";
 var dps = [];
 var company = null;
 var symbol = null;
 var chart = null;
 var columns = ["Date", "Open", "High", "Low", "Close", "Adjusted Close", "Volume"];
 var data1 = []
-
 function download(){
   window.location = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol="+symbol+"&apikey="+api+"&datatype=csv";
 }
-
 function getting_data(){
   if(company !== null){
     $.getJSON("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol="+symbol+"&outputsize=full&apikey="+api)
@@ -43,7 +41,6 @@ function getting_data(){
     })
   }
 }
-
 function graph(){
   chart = new CanvasJS.Chart("chartContainer", {
     title:{
@@ -68,7 +65,6 @@ function graph(){
   chart.options.data[0].dataPoints = dps;
   chart.render();
 }
-
 function getData(){
   if(chart !== null){
     chart.destroy();
@@ -86,7 +82,6 @@ function getData(){
   document.getElementById("chartContainer").disabled = true;
   getting_data();
 }
-
 function drawTable(){
   var table_container = document.getElementById("table_container");
   var para = document.createElement("p");
