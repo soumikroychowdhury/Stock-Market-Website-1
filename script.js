@@ -14,7 +14,7 @@
 
   let input=document.querySelector('input');
   input.addEventListener('keyup', (e) => {
-    if(e.code==13){
+    if(e.keyCode==13){
         check();
     }
   })
